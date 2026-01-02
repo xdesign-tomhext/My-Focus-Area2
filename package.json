@@ -1,0 +1,38 @@
+{
+  "name": "my-focus-area2",
+  "version": "1.0.0",
+  "description": "Cypress BDD testing framework for SauceDemo",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run",
+    "test:headed": "cypress run --headed --browser chrome",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:edge": "cypress run --browser edge"
+  },
+  "keywords": [
+    "cypress",
+    "bdd",
+    "cucumber",
+    "testing",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.17.0",
+    "esbuild": "^0.19.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js",
+    "filterSpecs": true,
+    "omitFiltered": true
+  }
+}

@@ -1,0 +1,35 @@
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+cypress/reports/
+
+# Cypress binary cache
+.cypress/
+
+# Test results
+test-results/
+results/
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+cypress.env.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log
+
+# npm
+npm-debug.log*
+yarn-error.log*
