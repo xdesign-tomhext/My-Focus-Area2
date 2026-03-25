@@ -24,11 +24,14 @@ cypress.env.json
 Thumbs.db
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
 *.log
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
 
 # npm
 npm-debug.log*

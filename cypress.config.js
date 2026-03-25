@@ -17,9 +17,7 @@ module.exports = defineConfig({
     
     // Environment variables for test data
     env: {
-      // Login credentials
-      username: 'standard_user',
-      password: 'secret_sauce',
+      // Login credentials are stored in cypress.env.json (see README for setup)
       
       // Checkout information
       firstName: 'John',
@@ -28,7 +26,7 @@ module.exports = defineConfig({
     },
     
     // Support file
-    supportFile: 'cypress/support/e2e.js',
+    supportFile: false,
     
     // Folders
     fixturesFolder: 'cypress/fixtures',

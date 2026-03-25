@@ -54,8 +54,7 @@ Before you begin, ensure you have the following installed:
    ```
 
    This will install:
-
-   - Cypress (v13.6.0+)
+   - Cypress (v14.1.0+)
    - @badeball/cypress-cucumber-preprocessor
    - @bahmutov/cypress-esbuild-preprocessor
    - esbuild
@@ -70,6 +69,8 @@ Before you begin, ensure you have the following installed:
 
    This downloads and installs the Cypress application binary (~400MB). If you see an error like "Cypress executable not found" when running tests, this step is required.
 
+   You should also install the Cucumber extension to your IDE to allow defined step definitions, giving the ability to jump from feature to step definitions.
+
 4. **Verify installation**:
 
    ```bash
@@ -77,6 +78,18 @@ Before you begin, ensure you have the following installed:
    ```
 
    You should see: `✔ Verified Cypress!`
+
+5. **Configure login credentials**:
+
+   For security, login credentials are not committed to the repository. Create a local configuration file:
+
+   ```bash
+   cp cypress.env.json.example cypress.env.json
+   ```
+
+   Then edit `cypress.env.json` and add valid test credentials. You can find test user credentials on the [SauceDemo website](https://www.saucedemo.com/) - look for the login information displayed on the homepage.
+
+   **Note:** The `cypress.env.json` file is listed in `.gitignore` and will never be committed to version control, keeping credentials secure.
 
 ## 🧪 Running Tests
 
@@ -221,7 +234,6 @@ This project follows Cypress and BDD best practices:
 
 - Page objects eliminate code duplication
 - Generic methods (e.g., `addItemToCart(itemName)`) support multiple products
-- Custom commands available via `commands.js` for Cypress-specific utilities
 
 ### 7. **Clear Documentation**
 
@@ -255,17 +267,15 @@ To verify the setup is working correctly:
 3. **Open Cypress Test Runner**:
 
    ```bash
-   npm run cypress:open
+   npm run cy:open
    ```
 
    You should see:
-
    - Cypress Test Runner window opens
    - E2E Testing option available
    - Two feature files listed: `login.feature` and `purchase.feature`
 
 4. **Run a test**:
-
    - Click on `login.feature`
    - Browser opens and test executes
    - All steps should pass (green checkmarks)
